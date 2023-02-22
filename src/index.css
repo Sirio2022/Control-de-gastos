@@ -110,6 +110,7 @@ header h1 {
 .formulario input[type="submit"] {
     background-color: #1048a4;
     border: none;
+    border-radius: 1rem;
     padding: 1rem;
     text-align: center;
     margin-top: 2rem;
