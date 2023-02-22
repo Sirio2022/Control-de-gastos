@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 import Mensaje from './Mensaje';
 import CerrarBtn from '../img/cerrar.svg';
 
-export default function Modal({ setModal, animarModal, setAnimarModal, guardarGasto }) {
+export default function Modal({
+  setModal,
+  animarModal,
+  setAnimarModal,
+  guardarGasto,
+}) {
   const [mensaje, setMensaje] = useState('');
   const [nombre, setNombre] = useState('');
   const [cantidad, setCantidad] = useState(0);
@@ -45,7 +50,7 @@ export default function Modal({ setModal, animarModal, setAnimarModal, guardarGa
           <input
             type="text"
             id="nombre"
-            placeholder="Ej. Transporte"
+            placeholder="Ej. Compra Pizza o Compra de ropa"
             value={nombre}
             onChange={(e) => setNombre(e.target.value)}
           />
@@ -71,9 +76,9 @@ export default function Modal({ setModal, animarModal, setAnimarModal, guardarGa
             <option value="">-- Seleciona --</option>
             <option value="ahorro">Ahorro</option>
             <option value="comida">Comida</option>
-            <option value="Casa">Casa</option>
-            <option value="Gastos">Gastos Varios</option>
-            <option value="Ocio">Ocio</option>
+            <option value="casa">Casa</option>
+            <option value="gastos">Gastos Varios</option>
+            <option value="ocio">Ocio</option>
             <option value="salud">Salud</option>
             <option value="suscripciones">Suscripciones</option>
           </select>
