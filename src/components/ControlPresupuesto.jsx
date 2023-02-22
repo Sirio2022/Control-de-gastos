@@ -9,7 +9,7 @@ export default function ControlPresupuesto({ presupuesto, gastos }) {
     setDisponible(presupuesto - totalGastado);
     setGastado(totalGastado);
     return () => {
-      console.log(totalGastado);
+      // console.log(totalGastado);
     };
   }, [gastos, presupuesto, disponible, gastado]);
 
