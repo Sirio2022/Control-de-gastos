@@ -27,12 +27,12 @@ const diccionarioIconos = {
   suscripciones: IconoSuscipciones,
 };
 
-export default function Gasto({ gasto }) {
+export default function Gasto({ gasto, setGastoEditar }) {
   const { nombre, cantidad, categoria, id, fecha } = gasto;
 
   const leadingActions = () => (
     <LeadingActions>
-      <SwipeAction onClick={() => console.log('editar...')}>Editar</SwipeAction>
+      <SwipeAction onClick={() => setGastoEditar(gasto)}>Editar</SwipeAction>
     </LeadingActions>
   );
 
@@ -57,6 +57,9 @@ export default function Gasto({ gasto }) {
               <p className="nombre-gasto">{nombre}</p>
               <p className="fecha-gasto">
                 Agregado el: <span>{formatearFecha(fecha)}</span>
+              </p>
+              <p className="fecha-gasto">
+                ID: <strong>{id}</strong>
               </p>
             </div>
           </div>
