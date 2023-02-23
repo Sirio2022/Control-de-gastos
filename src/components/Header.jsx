@@ -8,15 +8,20 @@ export default function Header({
   isValidPresupuesto,
   setIsValidPresupuesto,
   gastos,
+  setGastos,
 }) {
   return (
     <header>
       <h1>Planificador de Gastos</h1>
 
       {isValidPresupuesto ? (
-        <ControlPresupuesto 
-        gastos={gastos}
-        presupuesto={presupuesto} />
+        <ControlPresupuesto
+          gastos={gastos}
+          presupuesto={presupuesto}
+          setGastos={setGastos}
+          setPresupuesto={setPresupuesto}
+          setIsValidPresupuesto={setIsValidPresupuesto}
+        />
       ) : (
         <NuevoPresupuesto
           presupuesto={presupuesto}
