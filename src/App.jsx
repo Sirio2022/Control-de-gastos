@@ -60,11 +60,10 @@ function App() {
 
   useEffect(() => {
     const presupuestoLS = localStorage.getItem('presupuesto') ?? 0;
-    return () => {
-      if (presupuestoLS > 0) {
-        setIsValidPresupuesto(true);
-      }
-    };
+
+    if (presupuestoLS > 0) {
+      setIsValidPresupuesto(true);
+    }
   }, []);
 
   const handleNuevoGasto = () => {
